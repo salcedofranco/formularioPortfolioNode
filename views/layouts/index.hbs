@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Oswald:300,400" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+	<!-- Bootstrap CSS -->
+	<!--<link rel="stylesheet" href="css/lightbox.css">-->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
+
+    <!-- Owl Carousel -->
+
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+    <link rel="stylesheet" href="css/animate.min.css">
+
+  </head>
+  <body>
+    
+    {{{body}}}
+
+    <script>
+        const btnSwitch = document.querySelector('#switch');
+       
+        btnSwitch.addEventListener('click', () => {
+          document.body.classList.toggle('dark');
+          btnSwitch.classList.toggle('active');
+        
+        });
+       
+       </script>
+       
+       <script>$( document ).ready(function() {
+        new WOW().init();
+       });</script>
+       
+          <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+   
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>   
+        $('form').on('submit', (e) => {
+            e.preventDefault();
+
+            const email = $('#email').val().trim();
+            const subject = $('#subject').val().trim();
+            const text = $('#text').val().trim();
+
+            const data = {
+                email,
+                subject,
+                text
+            };
+
+            $.post('/email', data, function() {
+                console.log('Datos recibidos en el servidor'),
+                alert ("Correo enviado. Muchas gracias!!");
+            });
+
+        });;
+
+    </script>
+
+    <script>
+        function hizoClick() {
+          alert("Enviado");
+        }
+        </script>
+  </body>
+</html>
