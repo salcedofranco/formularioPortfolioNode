@@ -96,17 +96,7 @@ app.post('/email', (req, res) => {
 // Establece una ruta básica 
 //app.get('/', (req, res) => res.send('Hello World !'));
 
-$.ajax({
-    url: 'your-heroku.com',
-    type: 'POST',
-    headers: {'Accept': 'application/json;'},
-    data: {
-    "subject": "subject",
-    "message": "some body text"
-    },
-    }).done(function (res) {
-      console.log(res); // it shows your email sent message.
-    });
+
 
 /** Puerto y host para la app */
 const host = process.env.HOST || '0.0.0.0';
