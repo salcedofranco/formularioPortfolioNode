@@ -14,7 +14,7 @@ transporter = nodemailer.createTransport({
     port: process.env.MI_PORT,
     secure: true,
     auth: {
-        user: 'contact@francosalcedodev.com.ar',
+        user: 'formulario@francosalcedodev.online',
         pass: process.env.MI_CONTRA,
         
     },
@@ -25,9 +25,11 @@ transporter = nodemailer.createTransport({
 
 const sendMail = (email, subject, text, cb) => {
     const mailOptions = {
-        from: '"DESDE PORTFOLIO" <contact@francosalcedodev.com.ar>',
+        from: email,
         to: process.env.MI_EMAIL,
+        
         subject,
+        
         text
     };
 
