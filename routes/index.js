@@ -10,11 +10,11 @@ require('dotenv').config()
 
 
 transporter = nodemailer.createTransport({
-    host: 'ca9.toservers.com',
+    host: process.env.EL_HOST,
     port: process.env.MI_PORT,
     secure: true,
     auth: {
-        user: 'formulario@francosalcedodev.online',
+        user: process.env.MI_USUARIO,
         pass: process.env.MI_CONTRA,
         
     },
