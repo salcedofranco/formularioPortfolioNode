@@ -19,6 +19,8 @@ transporter = nodemailer.createTransport({
         
     },
     tls: {
+        secure: false,
+        ignoreTLS: true,
         rejectUnauthorized: false
     }
 });
