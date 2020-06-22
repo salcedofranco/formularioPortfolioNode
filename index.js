@@ -1,6 +1,10 @@
 
 const express = require('express');
+const enforce = require('express-sslify');
 const app = express();
+
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
+
 const path = require('path');
 
 app.use(require('./routes/index'));
