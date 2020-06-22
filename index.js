@@ -16,6 +16,8 @@ function ensureSecure(req, res, next) {
     }
 }
 
+app.use('/', ensureSecure);
+
 const path = require('path');
 
 app.use(require('./routes/index'));
